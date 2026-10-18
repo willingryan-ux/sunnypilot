@@ -2168,6 +2168,36 @@
     }
   ],
   "vehicle_settings": {
+    "fisker": {
+      "title": "Fisker Settings",
+      "description": "",
+      "items": [
+        {
+          "key": "FiskerACCAutoSpeed",
+          "widget": "toggle",
+          "needs_onroad_cycle": true,
+          "title": "ACC Auto-Speed",
+          "description": "Allow ACC to automatically adopt the posted speed limit as its target speed (fed from TSR). When off, ACC holds the driver's last set speed until the driver changes it with the wheel buttons.",
+          "enablement": [
+            {
+              "type": "offroad_only"
+            }
+          ]
+        },
+        {
+          "key": "FiskerACCTerrain",
+          "widget": "toggle",
+          "needs_onroad_cycle": true,
+          "title": "ACC Terrain Mode",
+          "description": "Signal to the ADAS module that ACC should run in Terrain mode. Intended for off-road / low-traction driving (longer follow gap, softer accel). Default off.",
+          "enablement": [
+            {
+              "type": "offroad_only"
+            }
+          ]
+        }
+      ]
+    },
     "hyundai": {
       "title": "Hyundai / Kia / Genesis Settings",
       "description": "",

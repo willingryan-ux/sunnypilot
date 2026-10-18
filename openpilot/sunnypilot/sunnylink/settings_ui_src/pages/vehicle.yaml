@@ -6,6 +6,24 @@ icon: vehicle
 order: 99
 kind: vehicle
 sections:
+- id: fisker
+  title: Fisker Settings
+  description: ''
+  items:
+  - key: FiskerACCAutoSpeed
+    widget: toggle
+    needs_onroad_cycle: true
+    title: ACC Auto-Speed
+    description: Allow ACC to automatically adopt the posted speed limit as its target speed (fed from TSR). When off, ACC holds the driver's last set speed until the driver changes it with the wheel buttons.
+    enablement:
+    - $ref: '#/macros/offroad'
+  - key: FiskerACCTerrain
+    widget: toggle
+    needs_onroad_cycle: true
+    title: ACC Terrain Mode
+    description: Signal to the ADAS module that ACC should run in Terrain mode. Intended for off-road / low-traction driving (longer follow gap, softer accel). Default off.
+    enablement:
+    - $ref: '#/macros/offroad'
 - id: hyundai
   title: Hyundai / Kia / Genesis Settings
   description: ''
